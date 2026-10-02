@@ -1,12 +1,12 @@
-// Command feature-flag-service serves the HTTP API described in README.md.
+// Command srv-geofence-alert serves the HTTP API described in README.md.
 package main
 
 import (
 	"log"
 	"os"
 
-	"github.com/luwa07832/feature-flag-service/internal/api"
-	"github.com/luwa07832/feature-flag-service/internal/store"
+	"github.com/xjs8sg98rz/srv-geofence-alert/internal/api"
+	"github.com/xjs8sg98rz/srv-geofence-alert/internal/store"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 	}
 	databasePath := os.Getenv("DB_PATH")
 	if databasePath == "" {
-		databasePath = "feature-flag-service.db"
+		databasePath = "srv-geofence-alert.db"
 	}
 
 	st, err := store.Open(databasePath)
